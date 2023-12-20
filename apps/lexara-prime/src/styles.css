@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* COLOR PALETTE */
+:root {
+    --smoky-black: #141010ff;
+    --folly: #F7375Dff;
+    --puce: #D18992ff;
+    --white-level-1: #FFFFFFff;
+    --white-level-2: #e6e6e6;
+    --white-level-3: #dddddd;
+    --licorice: #181414ff;
+    --davys-gray: #5F5C5Cff;
+    --gray-level-1: #797777ff;
+    --gray-level-2: #999999;
+
+    /* SHADOWS */
+    --level-1: 0 1rem 1rem 0 rgba(0, 0, 0, .1);
+    --level-2: 0 2rem 2rem 0 rgba(0, 0, 0, .2);
+    --level-3: 0 3rem 3rem 0 rgba(0, 0, 0, .3);
+}
+
+/* OVERRIDE DEFAULT STYLING */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    letter-spacing: .4px;
+    line-height: 1.4rem;
+}
+
+/* ENABLE SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--folly);
+    border-radius: 99px;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 6px;
+    opacity: .7;
+}
+
+body {
+    background: var(--licorice);
+    color: var(--licorice);
+    overflow-x: hidden;
+    height: 100vh;
+}
