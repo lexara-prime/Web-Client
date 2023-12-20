@@ -1,0 +1,30 @@
+{
+  "name": "lexara-prime-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/lexara-prime-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/lexara-prime-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "lexara-prime:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "lexara-prime:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "lexara-prime:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["lexara-prime"]
+}
